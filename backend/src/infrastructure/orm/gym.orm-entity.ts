@@ -50,4 +50,13 @@ export class GymOrmEntity {
   )
   @JoinColumn({ name: 'trainingPackageId' })
   trainingPackage: TrainingPackage;
+
+  @Column()
+  address: string;
+
+  @Column()
+  telephone: string;
+
+  @Column()
+  email: string;
 }

@@ -1,4 +1,11 @@
-import { IsInt, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import {
+  IsEmail,
+  IsInt,
+  IsNotEmpty,
+  IsNumber,
+  IsPhoneNumber,
+  IsString,
+} from 'class-validator';
 
 export class CreateGymDto {
   @IsString()
@@ -11,4 +18,14 @@ export class CreateGymDto {
   @IsInt()
   @IsNotEmpty()
   numberOfRooms: number;
+  @IsString()
+  @IsNotEmpty()
+  address: string;
+  @IsNotEmpty()
+  @IsPhoneNumber()
+  telephone: string;
+  @IsString()
+  @IsNotEmpty()
+  @IsEmail()
+  email: string;
 }
